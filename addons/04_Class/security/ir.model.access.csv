@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+04_Class.access_class_information,access_class_information,04_Class.model_class_information,base.group_user,1,1,1,1
