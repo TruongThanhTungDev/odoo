@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_recruitment_form" model="ir.ui.view">
+            <field name="name">hr.recruitment.form</field>
+            <field name="model">hr.recruitment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="detail"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_recruitment_tree" model="ir.ui.view">
+            <field name="name">hr.recruitment.tree</field>
+            <field name="model">hr.recruitment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="detail"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_recruitment">
+            <field name="name">ACS HR Recruitment</field>
+            <field name="res_model">hr.recruitment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recruitment" name="ACS HR Recruitment"/>
+        <menuitem id="menu_recruitment_list" name="Recruitment List" parent="menu_recruitment"/>
+    </data>
+</odoo>
